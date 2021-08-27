@@ -1,6 +1,9 @@
 from tkinter import *
 from pynput import mouse
 import psutil
+from gi.repository import Notify
+Notify.init("grapejuice-unfocus")
+Notify.Notification.new("Running").show()
 
 def checkIfProcessRunning(processName): #FROM: https://thispointer.com/python-check-if-a-process-is-running-by-name-and-find-its-process-id-pid/
     '''
@@ -31,6 +34,7 @@ def on_click(x, y, button, pressed):
             pass
         else:
             print('No roblox process running, quitting')
+            Notify.Notification.new("No roblox process running, quitting").show()
             exit()
 
 with mouse.Listener(on_click=on_click) as listener:
