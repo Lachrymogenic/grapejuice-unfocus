@@ -2,6 +2,7 @@ from tkinter import *
 from pynput import mouse
 import psutil
 from gi.repository import Notify
+import resource
 Notify.init("grapejuice-unfocus")
 Notify.Notification.new("Running").show()
 
@@ -23,11 +24,9 @@ def on_click(x, y, button, pressed):
     if not pressed and button == mouse.Button.right:
         root = Tk()
         root.geometry('2x1')
- 
-        button = Button(root, text = 'Close the window', command = root.destroy)
-        button.pack(pady = 25)
         root.update()
         root.destroy()
+        del root
     elif button == mouse.Button.right:
         #detect if roblox is running
         if checkIfProcessRunning('RobloxPlayerBet'):
