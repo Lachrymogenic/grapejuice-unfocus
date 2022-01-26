@@ -1,4 +1,7 @@
 # grapejuice-unfocus
+## WARNING: OBSOLETE, FOR AN OFFICIAL FIX TO THE MOUSE ISSUE: https://brinkervii.gitlab.io/grapejuice/docs/Guides/Installing-Wine.html
+## RUN THE COMMANDS AND YOU ARE GOOD TO GO
+
 Extremely simple window unfocus script for Grapejuice (https://gitlab.com/brinkervii/grapejuice/)
 
 # What is Grapejuice?
